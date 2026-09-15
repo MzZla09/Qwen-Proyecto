@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Inteligencia Artificial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Test de IA</h1>
+            <p class="subtitle">Pon a prueba tus conocimientos sobre Inteligencia Artificial</p>
+        </header>
+
+        <!-- Pantalla de Inicio -->
+        <div id="start-screen" class="screen active">
+            <div class="info-card">
+                <h2>Bienvenido</h2>
+                <p>Este test consta de <strong>5 preguntas aleatorias</strong> seleccionadas de un banco de 20 preguntas.</p>
+                <p>Cada vez que inicies el test, las preguntas serán diferentes.</p>
+                <button id="start-btn" class="btn-primary">Comenzar Test</button>
+            </div>
+        </div>
+
+        <!-- Pantalla del Test -->
+        <div id="quiz-screen" class="screen">
+            <div class="progress-bar">
+                <div id="progress" class="progress-fill"></div>
+            </div>
+            <div class="question-count">Pregunta <span id="current-question">1</span> de 5</div>
+            
+            <div class="question-card">
+                <h3 id="question-text">Pregunta aquí</h3>
+                <div id="options-container" class="options">
+                    <!-- Las opciones se generarán dinámicamente -->
+                </div>
+            </div>
+
+            <button id="next-btn" class="btn-primary" disabled>Siguiente</button>
+        </div>
+
+        <!-- Pantalla de Resultados -->
+        <div id="result-screen" class="screen">
+            <div class="result-card">
+                <h2>Resultados</h2>
+                <div class="score-circle">
+                    <span id="score">0</span>/5
+                </div>
+                <p id="feedback-message">Mensaje de feedback</p>
+                <button id="restart-btn" class="btn-primary">Intentar de Nuevo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
